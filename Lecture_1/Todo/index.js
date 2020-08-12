@@ -10,9 +10,9 @@ function deleteLiTodo(id) {
 function createLiForTodo(text) {
   const li = document.createElement('li')
   const textEl = document.createElement('span')
-  textEl.text = text
+  textEl.appendChild(document.createTextNode(text))
   const button = document.createElement('button')
-  button.text = 'Delete'
+  button.appendChild(document.createTextNode('Delete'))
   button.addEventListener('click', () => {
     li.remove()
   })
