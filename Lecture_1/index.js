@@ -36,3 +36,6 @@ console.log([] == 0) // true
 console.log([1] == 1) // true
 
 console.log('b' + 'a' + + 'a' + 'a');
+
+console.log({} + [])
+console.log([] + {})
