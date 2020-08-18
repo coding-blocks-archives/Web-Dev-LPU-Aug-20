@@ -8,6 +8,8 @@ function generateRandomId() {
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.onButtonClick = this.onButtonClick.bind(this);
+
     const initialTodo = {
       id: generateRandomId(),
       content: 'Bring Apples',
@@ -20,6 +22,20 @@ class App extends React.Component {
       newTodo: '',
       name: 'Jatin Katyal'
     }
+  }
+
+  onButtonClick() {
+    const todo = {
+      id: generateRandomId(),
+      content: this.state.newTodo,
+      done: false
+    }
+    this.setState({
+      todos: {
+        ...this.state.todos,
+        [todo.id]: todo
+      }
+    })
   }
   
   render() {
@@ -37,19 +53,7 @@ class App extends React.Component {
             })
           }}
         />
-        <button onClick={() => {
-          const todo = {
-            id: generateRandomId(),
-            content: this.state.newTodo,
-            done: false
-          }
-          this.setState({
-            todos: {
-              ...this.state.todos,
-              [todo.id]: todo
-            }
-          })
-        }}>
+        <button onClick={this.onButtonClick}>
           Add Todo
         </button>
 
