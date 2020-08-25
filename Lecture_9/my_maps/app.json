@@ -1,0 +1,12 @@
+{
+  "name": "my_maps",
+  "displayName": "my_maps",
+  "expo": {
+    "name": "my_maps",
+    "slug": "my_maps",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

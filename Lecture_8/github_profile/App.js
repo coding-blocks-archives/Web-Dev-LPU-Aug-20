@@ -15,7 +15,7 @@ export default function App() {
       const resp = await axios.get(`https://api.github.com/users/${githubUsername}`)
       setGithubProfile(resp.data)
     } catch (err) {
-
+      console.log(err)
     } finally {
       setLoading(false)
     }
